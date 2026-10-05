@@ -1,0 +1,72 @@
+{
+	"importer":"HTTPImporter", 
+	"parser":"JSONParser", 
+	"url":"https://api.weather.com/v2/pws/observations/current?stationId=IMINDE57&format=json&units=e&apiKey=13fb61bc0af743d3bb61bc0af7b3d354", 
+	"server":"http://127.0.0.1:8080/", 
+	"smartdata":"SmartDataEnvironmental", 
+	"storage":"public", 
+	"collection":"weather_minden_gebaeuded",
+  "json_mapping": [
+    {
+      "collection": "weather_minden_gebaeuded",
+      "mappingdata": [
+        {
+          "dbcolumn": "ts",
+          "path": "/observations/obsTimeUtc"
+        },
+        {
+          "dbcolumn": "irradiation",
+          "path": "/observations/solarRadiation"
+        },
+        {
+          "dbcolumn": "uv",
+          "path": "/observations/uv"
+        },
+        {
+          "dbcolumn": "winddir",
+          "path": "/observations/winddir"
+        },
+        {
+          "dbcolumn": "humidity",
+          "path": "/observations/humidity"
+        },
+        {
+          "dbcolumn": "temp",
+          "path": "/observations/imperial/temp"
+        },
+        {
+          "dbcolumn": "heatindex",
+          "path": "/observations/imperial/heatIndex"
+        },
+        {
+          "dbcolumn": "dewpt",
+          "path": "/observations/imperial/dewpt"
+        },
+        {
+          "dbcolumn": "windchill",
+          "path": "/observations/imperial/windChill"
+        },
+        {
+          "dbcolumn": "windspeed",
+          "path": "/observations/imperial/windSpeed"
+        },
+        {
+          "dbcolumn": "windgust",
+          "path": "/observations/imperial/windGust"
+        },
+        {
+          "dbcolumn": "pressure",
+          "path": "/observations/imperial/pressure"
+        },
+        {
+          "dbcolumn": "rainrate",
+          "path": "/observations/imperial/precipRate"
+        },
+        {
+          "dbcolumn": "raintotal",
+          "path": "/observations/imperial/precipTotal"
+        }
+      ]
+    }
+  ]
+}

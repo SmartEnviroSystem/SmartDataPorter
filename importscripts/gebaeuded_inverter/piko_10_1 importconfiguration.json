@@ -1,0 +1,355 @@
+{
+    "importer": "HTTPImporter",
+    "url": "http://piko-10-1.dhcp.fh-bielefeld.de/LogDaten.dat",
+    "username": "pvserver",
+    "password": "pvwr",
+    "download": true,
+	"archivefilename": "{date} piko-10-1.dat",
+    "parser": "CSVParser",
+    "server": "http://localhost:8080",
+    "smartdata": "SmartDataDachanlageServer",
+    "storage": "smartmonitoring",
+    "collection": "inverter_10_1",
+    "csv.delimiter": "\t",
+    "csv.skipbeginlines": 7,
+    "csv.headers": [
+        "Zeit",
+        "DC1 U",
+        "DC1 I",
+        "DC1 P",
+        "DC1 T",
+        "DC1 S",
+        "DC2 U",
+        "DC2 I",
+        "DC2 P",
+        "DC2 T",
+        "DC2 S",
+        "DC3 U",
+        "DC3 I",
+        "DC3 P",
+        "DC3 T",
+        "DC3 S",
+        "AC1 U",
+        "AC1 I",
+        "AC1 P",
+        "AC1 T",
+        "AC2 U",
+        "AC2 I",
+        "AC2 P",
+        "AC2 T",
+        "AC3 U",
+        "AC3 I",
+        "AC3 P",
+        "AC3 T",
+        "AC F",
+        "FC I",
+        "Ain1",
+        "Ain2",
+        "Ain3",
+        "Ain4",
+        "AC S",
+        "Err",
+        "ENS S",
+        "ENS Err",
+        "SH1 P",
+        "SH2 P",
+        "SH3 P",
+        "SC1 P",
+        "SC2 P",
+        "SC3 P",
+        "HC1 P",
+        "HC2 P",
+        "HC3 P",
+        "SOC H",
+        "BAT Te",
+        "BAT Cy",
+        "KB S",
+        "TOTAL E",
+        "OWN E",
+        "HOME E",
+        "Iso R",
+        "Ereignis"
+    ],
+    "csv.mapping": [
+        {
+            "csv_column": "Zeit",
+            "db_column": "ts",
+            "type": "timestamp"
+        },
+        {
+            "csv_column": "DC1 U",
+            "db_column": "dc1_u",
+            "type": "int4"
+        },
+        {
+            "csv_column": "DC1 I",
+            "db_column": "dc1_i",
+            "type": "int4"
+        },
+        {
+            "csv_column": "DC1 P",
+            "db_column": "dc1_p",
+            "type": "int4"
+        },
+        {
+            "csv_column": "DC1 T",
+            "db_column": "dc1_t",
+            "type": "int4"
+        },
+        {
+            "csv_column": "DC1 S",
+            "db_column": "dc1_s",
+            "type": "int4"
+        },
+        {
+            "csv_column": "DC2 U",
+            "db_column": "dc2_u",
+            "type": "int4"
+        },
+        {
+            "csv_column": "DC2 I",
+            "db_column": "dc2_i",
+            "type": "int4"
+        },
+        {
+            "csv_column": "DC2 P",
+            "db_column": "dc2_p",
+            "type": "int4"
+        },
+        {
+            "csv_column": "DC2 T",
+            "db_column": "dc2_t",
+            "type": "int4"
+        },
+        {
+            "csv_column": "DC2 S",
+            "db_column": "dc2_s",
+            "type": "int4"
+        },
+        {
+            "csv_column": "DC3 U",
+            "db_column": "dc3_u",
+            "type": "int4"
+        },
+        {
+            "csv_column": "DC3 I",
+            "db_column": "dc3_i",
+            "type": "int4"
+        },
+        {
+            "csv_column": "DC3 P",
+            "db_column": "dc3_p",
+            "type": "int4"
+        },
+        {
+            "csv_column": "DC3 T",
+            "db_column": "dc3_t",
+            "type": "int4"
+        },
+        {
+            "csv_column": "DC3 S",
+            "db_column": "dc3_s",
+            "type": "int4"
+        },
+        {
+            "csv_column": "AC1 U",
+            "db_column": "ac1_u",
+            "type": "int4"
+        },
+        {
+            "csv_column": "AC1 I",
+            "db_column": "ac1_i",
+            "type": "int4"
+        },
+        {
+            "csv_column": "AC1 P",
+            "db_column": "ac1_p",
+            "type": "int4"
+        },
+        {
+            "csv_column": "AC1 T",
+            "db_column": "ac1_t",
+            "type": "int4"
+        },
+        {
+            "csv_column": "AC2 U",
+            "db_column": "ac2_u",
+            "type": "int4"
+        },
+        {
+            "csv_column": "AC2 I",
+            "db_column": "ac2_i",
+            "type": "int4"
+        },
+        {
+            "csv_column": "AC2 P",
+            "db_column": "ac2_p",
+            "type": "int4"
+        },
+        {
+            "csv_column": "AC2 T",
+            "db_column": "ac2_t",
+            "type": "int4"
+        },
+        {
+            "csv_column": "AC3 U",
+            "db_column": "ac3_u",
+            "type": "int4"
+        },
+        {
+            "csv_column": "AC3 I",
+            "db_column": "ac3_i",
+            "type": "int4"
+        },
+        {
+            "csv_column": "AC3 P",
+            "db_column": "ac3_p",
+            "type": "int4"
+        },
+        {
+            "csv_column": "AC3 T",
+            "db_column": "ac3_t",
+            "type": "int4"
+        },
+        {
+            "csv_column": "AC F",
+            "db_column": "ac_f",
+            "type": "int4"
+        },
+        {
+            "csv_column": "FC I",
+            "db_column": "fc_i",
+            "type": "int4"
+        },
+        {
+            "csv_column": "Ain1",
+            "db_column": "ain1",
+            "type": "int4"
+        },
+        {
+            "csv_column": "Ain2",
+            "db_column": "ain2",
+            "type": "int4"
+        },
+        {
+            "csv_column": "Ain3",
+            "db_column": "ain3",
+            "type": "int4"
+        },
+        {
+            "csv_column": "Ain4",
+            "db_column": "ain4",
+            "type": "int4"
+        },
+        {
+            "csv_column": "AC S",
+            "db_column": "ac_s",
+            "type": "int4"
+        },
+        {
+            "csv_column": "Err",
+            "db_column": "err",
+            "type": "int4"
+        },
+        {
+            "csv_column": "ENS S",
+            "db_column": "ens_s",
+            "type": "int4"
+        },
+        {
+            "csv_column": "ENS Err",
+            "db_column": "ens_err",
+            "type": "int4"
+        },
+        {
+            "csv_column": "SH1 P",
+            "db_column": "sh1_p",
+            "type": "float4"
+        },
+        {
+            "csv_column": "SH2 P",
+            "db_column": "sh2_p",
+            "type": "float4"
+        },
+        {
+            "csv_column": "SH3 P",
+            "db_column": "sh3_p",
+            "type": "float4"
+        },
+        {
+            "csv_column": "SC1 P",
+            "db_column": "sc1_p",
+            "type": "float4"
+        },
+        {
+            "csv_column": "SC2 P",
+            "db_column": "sc2_p",
+            "type": "float4"
+        },
+        {
+            "csv_column": "SC3 P",
+            "db_column": "sc3_p",
+            "type": "float4"
+        },
+        {
+            "csv_column": "HC1 P",
+            "db_column": "hc1_p",
+            "type": "float4"
+        },
+        {
+            "csv_column": "HC2 P",
+            "db_column": "hc2_p",
+            "type": "float4"
+        },
+        {
+            "csv_column": "HC3 P",
+            "db_column": "hc3_p",
+            "type": "float4"
+        },
+        {
+            "csv_column": "SOC H",
+            "db_column": "soc_h",
+            "type": "float4"
+        },
+        {
+            "csv_column": "BAT Te",
+            "db_column": "bat_te",
+            "type": "float4"
+        },
+        {
+            "csv_column": "BAT Cy",
+            "db_column": "bat_cy",
+            "type": "int4"
+        },
+        {
+            "csv_column": "KB S",
+            "db_column": "kb_s",
+            "type": "int4"
+        },
+        {
+            "csv_column": "TOTAL E",
+            "db_column": "total_e",
+            "type": "int4"
+        },
+        {
+            "csv_column": "OWN E",
+            "db_column": "own_e",
+            "type": "int4"
+        },
+        {
+            "csv_column": "HOME E",
+            "db_column": "home_e",
+            "type": "int4"
+        },
+        {
+            "csv_column": "Iso R",
+            "db_column": "iso_r",
+            "type": "int4"
+        },
+        {
+            "csv_column": "Ereignis",
+            "db_column": "ereignis",
+            "type": "int4"
+        }
+    ]
+}
